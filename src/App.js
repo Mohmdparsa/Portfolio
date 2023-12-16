@@ -5,6 +5,7 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { prefixer } from "stylis";
 import "./App.css";
+import {Helmet , HelmetProvider} from "react-helmet-async"
 
 const theme = createTheme({
   direction: "rtl",
@@ -17,9 +18,12 @@ function App() {
   return (
     <CacheProvider value={cacheRTL}>
       <ThemeProvider theme={theme}>
+        <HelmetProvider>
+          <Helmet><title>My Portfolio</title></Helmet>
         <div className="App">
-          <Button variant="contained">hello</Button>
+          <Button variant="contained">کلیک کنید</Button>
         </div>
+        </HelmetProvider>
       </ThemeProvider>
     </CacheProvider>
   );
