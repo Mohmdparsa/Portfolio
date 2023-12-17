@@ -7,10 +7,7 @@ import { prefixer } from "stylis";
 import "./App.css";
 import {Helmet , HelmetProvider} from "react-helmet-async"
 import Header from "./Componentes/UI/Header";
-
-const theme = createTheme({
-  direction: "rtl",
-});
+import {theme} from "./Componentes/UI/Theme"
 const cacheRTL = createCache({
   key: "muirtl",
   stylisPlugins: [prefixer, rtlPlugin],
