@@ -14,9 +14,9 @@ const Header = () => {
   return (
     <>
       <ElevationScroll>
-        <AppBar>
+        <AppBar position="sticky">
           <Toolbar>
-            <Button variant="primary">کلیک کنید</Button>
+            <Button variant="contained" color="secondary">کلیک کنید</Button>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
