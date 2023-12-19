@@ -5,8 +5,9 @@ import createCache from "@emotion/cache";
 import { prefixer } from "stylis";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { theme } from "../UI/Theme";
-import { Grid, Typography, Box, Divider, Avatar } from "@mui/material";
+import { Typography, Box, Divider, Avatar } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import Grid from '@mui/material/Unstable_Grid2'
 
 const Layout = ({ children }) => {
   const cacheRTL = createCache({
@@ -23,7 +24,6 @@ const Layout = ({ children }) => {
             </Helmet>
             <Grid container sx={{ height: "100vh" }}>
               <Grid
-                xs={2}
                 sx={{
                   backgroundColor: "secondary.main",
                   color: "white",
@@ -33,7 +33,6 @@ const Layout = ({ children }) => {
                 سایدبار
               </Grid>
               <Grid
-                xs={10}
                 sx={{ backgroundColor: "primary.main", textAlign: "center" }}
               >
                 محتوای اصلی
