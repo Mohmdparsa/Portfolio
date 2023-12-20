@@ -26,7 +26,7 @@ const Sidebar = () => {
               margin: "0 auto",
               mt: "15px",
             }}
-          ></Avatar>
+          >A A</Avatar>
           </Hidden>
           <Typography variant="h4" sx={{ mt: "15px" }}>
             امیرعلی آذرمنش
