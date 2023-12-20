@@ -1,4 +1,4 @@
-import { Typography, Box, Divider, Avatar } from "@mui/material";
+import { Typography, Box, Divider, Avatar , Hidden} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { grey } from "@mui/material/colors";
 const Sidebar = () => {
@@ -17,6 +17,7 @@ const Sidebar = () => {
         }}
       >
         <Box sx={{ textAlign: "center", justifyContent: "center" }}>
+          <Hidden mdDown>
           <Avatar
           src={require("../../Assets/portfolio-image.jpg")}
             sx={{
@@ -26,6 +27,7 @@ const Sidebar = () => {
               mt: "15px",
             }}
           ></Avatar>
+          </Hidden>
           <Typography variant="h4" sx={{ mt: "15px" }}>
             امیرعلی آذرمنش
           </Typography>
