@@ -6,8 +6,8 @@ import { prefixer } from "stylis";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { theme } from "../UI/Theme";
 import { Typography, Box, Divider, Avatar } from "@mui/material";
-import { grey } from "@mui/material/colors";
 import Grid from "@mui/material/Unstable_Grid2";
+import Sidebar from "../UI/Sidebar";
 
 const Layout = ({ children }) => {
   const cacheRTL = createCache({
@@ -23,20 +23,7 @@ const Layout = ({ children }) => {
               <title>My Portfolio</title>
             </Helmet>
             <Grid container sx={{ height: "100vh" }}>
-              <Grid
-                xs={0}
-                sm={0}
-                md={3}
-                lg={3}
-                xl={3}
-                sx={{
-                  backgroundColor: "secondary.main",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                سایدبار
-              </Grid>
+          <Sidebar/>
               <Grid
                 xs={12}
                 sm={12}
