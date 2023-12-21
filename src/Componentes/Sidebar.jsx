@@ -20,6 +20,12 @@ import {
   CopyrightRounded,
 } from "@mui/icons-material";
 const Sidebar = ({value , handleChange}) => {
+  const a11yProps = (index)=> {
+  return {
+    id: `vertical-tab-${index}`,
+    'aria-controls': `vertical-tabpanel-${index}`,
+  };
+}
   return (
     <>
       <Grid
@@ -54,8 +60,8 @@ const Sidebar = ({value , handleChange}) => {
           <Typography variant="h6">توسعه دهنده فرانت اند</Typography>
           <Divider variant="middle" color="grey" sx={{ mt: "10px" }} />
           <Tabs
-            // variant="scrollable"
-            // scrollButtons="auto"
+            variant="scrollable"
+            scrollButtons="auto"
             allowScrollButtonsMobile
             orientation="vertical"
             value={value}
@@ -66,36 +72,42 @@ const Sidebar = ({value , handleChange}) => {
               icon={<HomeRounded />}
               iconPosition="start"
               sx={{ color: "white" }}
+              {...a11yProps(0)}
             />
             <Tab
               label="درباره من"
               icon={<AccountCircleRounded />}
               iconPosition="start"
               sx={{ color: "white" }}
+              {...a11yProps(1)}
             />
             <Tab
               label="رزومه من"
               icon={<DescriptionRounded />}
               iconPosition="start"
               sx={{ color: "white" }}
+              {...a11yProps(2)}
             />
             <Tab
               label="نمونه کارها"
               icon={<FolderRounded />}
               iconPosition="start"
               sx={{ color: "white" }}
+              {...a11yProps(3)}
             />
             <Tab
               label="نظرات"
               icon={<ThreePRounded />}
               iconPosition="start"
               sx={{ color: "white" }}
+              {...a11yProps(4)}
             />
             <Tab
               label="ارتباط با من"
               icon={<CallRounded />}
               iconPosition="start"
               sx={{ color: "white" }}
+              {...a11yProps(5)}
             />
           </Tabs>
           <Divider variant="middle" color="grey" sx={{ mt: "10px" }} />
