@@ -7,7 +7,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { theme } from "../UI/Theme";
 import { Typography, Box, Divider, Avatar } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import Sidebar from "../UI/Sidebar";
+import Sidebar from "../Sidebar";
 
 const Layout = ({ children }) => {
   const cacheRTL = createCache({

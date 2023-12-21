@@ -37,7 +37,7 @@ const Sidebar = () => {
         <Box sx={{ textAlign: "center", justifyContent: "center" }}>
           <Hidden mdDown>
             <Avatar
-              src={require("../../Assets/portfolio-image.jpg")}
+              src={require("../Assets/portfolio-image.jpg")}
               sx={{
                 height: "150px",
                 width: "153px",
