@@ -19,7 +19,7 @@ import {
   FavoriteRounded,
   CopyrightRounded,
 } from "@mui/icons-material";
-const Sidebar = () => {
+const Sidebar = ({value , handleChange}) => {
   return (
     <>
       <Grid
@@ -58,6 +58,8 @@ const Sidebar = () => {
             // scrollButtons="auto"
             allowScrollButtonsMobile
             orientation="vertical"
+            value={value}
+            onChange={handleChange}
           >
             <Tab
               label="صفحه اصلی"
