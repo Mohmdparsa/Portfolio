@@ -1,4 +1,4 @@
-import Layout from "./Componentes/Layouts/MainLayout";
+import Layout from "./Layouts/MainLayout"
 import Sidebar from "./Componentes/Sidebar"
 import ContentContainer from "./Componentes/ContentContainer"
 import { useState } from "react";
