@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Unstable_Grid2";
-import DrawerContent from "./UI/DrawerContent";
+import DrawerContent from "./DrawerContent";
 import { useState } from "react";
 import { Drawer, Box } from "@mui/material";
 import Fab from "@mui/material/Fab";
