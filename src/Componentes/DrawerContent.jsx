@@ -5,19 +5,13 @@ import {
   FolderRounded,
   ThreePRounded,
   CallRounded,
-  FavoriteRounded,
-  CopyrightRounded,
 } from "@mui/icons-material";
 import {
-  Typography,
   Box,
-  Divider,
-  Avatar,
-  Hidden,
   Tabs,
   Tab,
 } from "@mui/material";
-import { grey, blueGrey } from "@mui/material/colors";
+import { grey} from "@mui/material/colors";
 import SidebarHeader from "./Sidebar/SidebarHeader";
 import SidebarFooter from "./Sidebar/SidebarFooter";
 const DrawerContent = ({ value, handleChange }) => {
