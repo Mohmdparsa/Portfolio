@@ -18,6 +18,7 @@ import {
   Tab,
 } from "@mui/material";
 import { grey, blueGrey } from "@mui/material/colors";
+import SidebarHeader from "./Sidebar/SidebarHeader";
 const DrawerContent = ({ value, handleChange }) => {
   const a11yProps = (index) => {
     return {
@@ -28,6 +29,8 @@ const DrawerContent = ({ value, handleChange }) => {
   return (
     <>
       <Box sx={{ textAlign: "center", justifyContent: "center" }}>
+        <SidebarHeader/>
+   
         <Tabs
           variant="scrollable"
           scrollButtons="auto"
