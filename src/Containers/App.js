@@ -4,6 +4,7 @@ import ContentContainer from "./ContentContainer"
 import { useState } from "react";
 import TabPanel from "../Componentes/Tabs/TabPanel";
 import { Typography } from "@mui/material";
+import SidebarContainers from "./SidebarContainers";
 
 function App() {
   const [value , setValue] = useState(0)
@@ -13,7 +14,10 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <Sidebar value={value} handleChange={handleChange}/>
+        <SidebarContainers>
+           <Sidebar value={value} handleChange={handleChange}/>  
+        </SidebarContainers>
+     
         <ContentContainer> 
         <TabPanel value={value} index={0}>
           <Typography variant="h3" sx={{textAlign:"center"}}>
