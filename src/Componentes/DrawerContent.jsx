@@ -19,6 +19,7 @@ import {
 } from "@mui/material";
 import { grey, blueGrey } from "@mui/material/colors";
 import SidebarHeader from "./Sidebar/SidebarHeader";
+import SidebarFooter from "./Sidebar/SidebarFooter";
 const DrawerContent = ({ value, handleChange }) => {
   const a11yProps = (index) => {
     return {
@@ -125,7 +126,7 @@ const DrawerContent = ({ value, handleChange }) => {
             {...a11yProps(5)}
           />
         </Tabs>
-       
+       <SidebarFooter/>
       </Box>
     </>
   );
