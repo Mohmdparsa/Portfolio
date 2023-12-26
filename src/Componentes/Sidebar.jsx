@@ -1,4 +1,4 @@
-import Grid from "@mui/material/Unstable_Grid2";
+
 import DrawerContent from "./DrawerContent";
 import { useState } from "react";
 import { Drawer, Box } from "@mui/material";
@@ -14,18 +14,7 @@ const Sidebar = ({ value, handleChange }) => {
 
   return (
     <>
-      <Grid
-        xs={0}
-        sm={0}
-        md={3}
-        lg={3}
-        xl={3}
-        sx={{
-          backgroundColor: "secondary.main",
-          color: "white",
-          textAlign: "center",
-        }}
-      >
+     
         <Box
           sx={{
             display: {
@@ -61,7 +50,6 @@ const Sidebar = ({ value, handleChange }) => {
         >
           <DrawerContent value={value} handleChange={handleChange} />
         </Drawer>
-      </Grid>
     </>
   );
 };
