@@ -1,8 +1,8 @@
-import Layout from "./Layouts/MainLayout"
-import Sidebar from "./Componentes/Sidebar"
-import ContentContainer from "./Componentes/ContentContainer"
+import Layout from "../Layouts/MainLayout"
+import Sidebar from "../Componentes/Sidebar"
+import ContentContainer from "../Componentes/ContentContainer"
 import { useState } from "react";
-import TabPanel from "./Componentes/Tabs/TabPanel";
+import TabPanel from "../Componentes/Tabs/TabPanel";
 import { Typography } from "@mui/material";
 
 function App() {
