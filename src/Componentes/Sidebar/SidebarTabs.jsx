@@ -1,3 +1,4 @@
+import { Tab , Tabs } from "@mui/material";
 const SidebarTabs = () => {
   return (
     <>
