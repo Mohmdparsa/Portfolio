@@ -1,9 +1,17 @@
-import { Tab , Tabs } from "@mui/material";
-import { grey} from "@mui/material/colors";
+import { Tab, Tabs } from "@mui/material";
+import { grey } from "@mui/material/colors";
+import {
+  HomeRounded,
+  AccountCircleRounded,
+  DescriptionRounded,
+  FolderRounded,
+  ThreePRounded,
+  CallRounded,
+} from "@mui/icons-material";
 const SidebarTabs = ({ value, handleChange }) => {
   return (
     <>
-     <Tabs
+      <Tabs
         variant="scrollable"
         scrollButtons="auto"
         allowScrollButtonsMobile
