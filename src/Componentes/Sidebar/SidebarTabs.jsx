@@ -9,6 +9,12 @@ import {
   CallRounded,
 } from "@mui/icons-material";
 const SidebarTabs = ({ value, handleChange }) => {
+    const a11yProps = (index) => {
+        return {
+          id: `vertical-tab-${index}`,
+          "aria-controls": `vertical-tabpanel-${index}`,
+        };
+      };
   return (
     <>
       <Tabs
