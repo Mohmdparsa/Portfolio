@@ -1,17 +1,4 @@
-import {
-  HomeRounded,
-  AccountCircleRounded,
-  DescriptionRounded,
-  FolderRounded,
-  ThreePRounded,
-  CallRounded,
-} from "@mui/icons-material";
-import {
-  Box,
-  Tabs,
-  Tab,
-} from "@mui/material";
-import { grey} from "@mui/material/colors";
+import { Box } from "@mui/material";
 import SidebarHeader from "./Sidebar/SidebarHeader";
 import SidebarFooter from "./Sidebar/SidebarFooter";
 import SidebarTabs from "./Sidebar/SidebarTabs";
@@ -25,11 +12,10 @@ const DrawerContent = ({ value, handleChange }) => {
   return (
     <>
       <Box sx={{ textAlign: "center", justifyContent: "center" }}>
-        <SidebarHeader/>
+        <SidebarHeader />
         <SidebarTabs />
-   
-    
-       <SidebarFooter/>
+
+        <SidebarFooter />
       </Box>
     </>
   );
