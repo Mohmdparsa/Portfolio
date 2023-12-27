@@ -14,6 +14,7 @@ import {
 import { grey} from "@mui/material/colors";
 import SidebarHeader from "./Sidebar/SidebarHeader";
 import SidebarFooter from "./Sidebar/SidebarFooter";
+import SidebarTabs from "./Sidebar/SidebarTabs";
 const DrawerContent = ({ value, handleChange }) => {
   const a11yProps = (index) => {
     return {
@@ -25,8 +26,9 @@ const DrawerContent = ({ value, handleChange }) => {
     <>
       <Box sx={{ textAlign: "center", justifyContent: "center" }}>
         <SidebarHeader/>
+        <SidebarTabs />
    
-       
+    
        <SidebarFooter/>
       </Box>
     </>
