@@ -13,7 +13,7 @@ const DrawerContent = ({ value, handleChange }) => {
     <>
       <Box sx={{ textAlign: "center", justifyContent: "center" }}>
         <SidebarHeader />
-        <SidebarTabs />
+        <SidebarTabs value={value} handleChange={handleChange}/>
 
         <SidebarFooter />
       </Box>

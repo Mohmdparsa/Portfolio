@@ -1,6 +1,6 @@
 import { Tab , Tabs } from "@mui/material";
 import { grey} from "@mui/material/colors";
-const SidebarTabs = () => {
+const SidebarTabs = ({ value, handleChange }) => {
   return (
     <>
      <Tabs
