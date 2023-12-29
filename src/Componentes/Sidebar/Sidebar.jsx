@@ -1,7 +1,7 @@
 
 import DrawerContent from "./SidebarContent";
 import { useState } from "react";
-import { Drawer, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import Fab from "@mui/material/Fab";
 import { MenuRounded } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
@@ -36,20 +36,7 @@ const Sidebar = ({ value, handleChange }) => {
           </Fab>
         </Box>
         <DrawerContent value={value} handleChange={handleChange} />
-        <Drawer
-          open={open}
-          variant="temporary"
-          onClose={() => setOpen(false)}
-          sx={{
-            "& .MuiDrawer-paper": {
-              width: 300,
-              backgroundColor: "secondary.main",
-              color: "white",
-            },
-          }}
-        >
-          <DrawerContent value={value} handleChange={handleChange} />
-        </Drawer>
+
     </>
   );
 };
