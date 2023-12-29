@@ -2,7 +2,7 @@ import SidebarDrawer from "../Drawer/SidebarDrawer";
 import SidebarContent from "./SidebarContent";
 import { useState } from "react";
 import { Box } from "@mui/material";
-
+import DrawerActionButton from "../Drawer/DrawerActionButton";
 
 const Sidebar = ({ value, handleChange }) => {
   const [open, setOpen] = useState(false);
@@ -12,7 +12,7 @@ const Sidebar = ({ value, handleChange }) => {
 
   return (
     <>
- 
+ <DrawerActionButton/>
         <SidebarContent value={value} handleChange={handleChange} />
         <SidebarDrawer value={value} handleChange={handleChange}/>
     </>
