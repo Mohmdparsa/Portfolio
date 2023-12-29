@@ -1,5 +1,7 @@
 import { Drawer } from "@mui/material"
+import { useState } from "react";
 const SidebarDrawer = ()=>{
+    const [open, setOpen] = useState(false);
     return(
         <>
                 <Drawer
