@@ -1,5 +1,5 @@
 
-import DrawerContent from "./DrawerContent";
+import DrawerContent from "./SidebarContent";
 import { useState } from "react";
 import { Drawer, Box } from "@mui/material";
 import Fab from "@mui/material/Fab";
