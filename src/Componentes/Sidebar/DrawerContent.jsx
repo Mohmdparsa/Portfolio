@@ -1,7 +1,5 @@
 import { Box } from "@mui/material";
-import SidebarHeader from "./SidebarHeader";
-import SidebarFooter from "./SidebarFooter";
-import SidebarTabs from "./SidebarTabs";
+import {SidebarTabs , SidebarHeader , SidebarFooter} from "./Index"
 const DrawerContent = ({ value, handleChange }) => {
 
   return (
