@@ -5,9 +5,6 @@ import DrawerActionButton from "../Drawer/DrawerActionButton";
 
 const Sidebar = ({ value, handleChange }) => {
   const [open, setOpen] = useState(false);
-  const handleDrawerToggle = () => {
-    return setOpen(!open);
-  };
 
   return (
     <>
