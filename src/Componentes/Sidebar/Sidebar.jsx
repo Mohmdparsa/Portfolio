@@ -1,7 +1,6 @@
 import SidebarDrawer from "../Drawer/SidebarDrawer";
 import SidebarContent from "./SidebarContent";
 import { useState } from "react";
-import { Box } from "@mui/material";
 import DrawerActionButton from "../Drawer/DrawerActionButton";
 
 const Sidebar = ({ value, handleChange }) => {
