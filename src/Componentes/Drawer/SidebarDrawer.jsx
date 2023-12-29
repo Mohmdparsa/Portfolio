@@ -1,5 +1,6 @@
 import { Drawer } from "@mui/material"
 import { useState } from "react";
+import SidebarContent from "../Sidebar/SidebarContent";
 const SidebarDrawer = (value , handleChange)=>{
     const [open, setOpen] = useState(false);
     return(
@@ -16,7 +17,7 @@ const SidebarDrawer = (value , handleChange)=>{
             },
           }}
         >
-          <DrawerContent value={value} handleChange={handleChange} />
+          <SidebarContent value={value} handleChange={handleChange} />
         </Drawer>
         </>
     )
