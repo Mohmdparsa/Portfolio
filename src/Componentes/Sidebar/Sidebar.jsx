@@ -1,5 +1,5 @@
 import SidebarDrawer from "../Drawer/SidebarDrawer";
-import DrawerContent from "./SidebarContent";
+import SidebarContent from "./SidebarContent";
 import { useState } from "react";
 import { Box } from "@mui/material";
 import Fab from "@mui/material/Fab";
@@ -35,7 +35,7 @@ const Sidebar = ({ value, handleChange }) => {
             <MenuRounded />
           </Fab>
         </Box>
-        <DrawerContent value={value} handleChange={handleChange} />
+        <SidebarContent value={value} handleChange={handleChange} />
         <SidebarDrawer value={value} handleChange={handleChange}/>
     </>
   );
