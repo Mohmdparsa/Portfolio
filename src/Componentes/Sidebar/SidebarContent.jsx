@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import {SidebarTabs , SidebarHeader , SidebarFooter} from "./Index"
-const DrawerContent = ({ value, handleChange }) => {
+const SidebarContent = ({ value, handleChange }) => {
 
   return (
     <>
@@ -14,4 +14,4 @@ const DrawerContent = ({ value, handleChange }) => {
   );
 };
 
-export default DrawerContent;
+export default SidebarContent;
