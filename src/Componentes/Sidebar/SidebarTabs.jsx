@@ -19,6 +19,14 @@ const SidebarTabs = () => {
       "aria-controls": `vertical-tabpanel-${index}`,
     };
   };
+  const tabs = [
+    { label: "صفحه اصلی", icon: <HomeRounded />, ...a11yProps(0) },
+    { label: "درباره من", icon: <AccountCircleRounded />, ...a11yProps(1) },
+    { label: "رزومه من", icon: <DescriptionRounded />, ...a11yProps(2) },
+    { label: "نمونه کارها", icon: <FolderRounded />, ...a11yProps(3) },
+    { label: "نظرات", icon: <ThreePRounded />, ...a11yProps(4) },
+    { label: "ارتباط با من", icon: <CallRounded />, ...a11yProps(5) },
+  ];
   return (
     <>
       <Tabs
@@ -29,91 +37,26 @@ const SidebarTabs = () => {
         value={pageNumber}
         onChange={handlePageNumber}
       >
-        <Tab
-          label="صفحه اصلی"
-          icon={<HomeRounded />}
+        {tabs.map((tab , index)=>(
+            <Tab
+            key={index}
+          label={tab.label}
+          icon={tab.icon}
           iconPosition="start"
           sx={{
             color: "white",
             "&.MuiTab-root": { minHeight: 48 },
             backgroundColor: grey[800],
-            my: 0.3,
+            my: 0.2,
             mx: 2,
             borderRadius: 2,
-            mt: 1,
+            mt: 0.4,
           }}
-          {...a11yProps(0)}
+          {...tab}
         />
-        <Tab
-          label="درباره من"
-          icon={<AccountCircleRounded />}
-          iconPosition="start"
-          sx={{
-            color: "white",
-            "&.MuiTab-root": { minHeight: 48 },
-            backgroundColor: grey[800],
-            my: 0.3,
-            mx: 2,
-            borderRadius: 2,
-          }}
-          {...a11yProps(1)}
-        />
-        <Tab
-          label="رزومه من"
-          icon={<DescriptionRounded />}
-          iconPosition="start"
-          sx={{
-            color: "white",
-            "&.MuiTab-root": { minHeight: 48 },
-            backgroundColor: grey[800],
-            my: 0.3,
-            mx: 2,
-            borderRadius: 2,
-          }}
-          {...a11yProps(2)}
-        />
-        <Tab
-          label="نمونه کارها"
-          icon={<FolderRounded />}
-          iconPosition="start"
-          sx={{
-            color: "white",
-            "&.MuiTab-root": { minHeight: 48 },
-            backgroundColor: grey[800],
-            my: 0.3,
-            mx: 2,
-            borderRadius: 2,
-          }}
-          {...a11yProps(3)}
-        />
-        <Tab
-          label="نظرات"
-          icon={<ThreePRounded />}
-          iconPosition="start"
-          sx={{
-            color: "white",
-            "&.MuiTab-root": { minHeight: 48 },
-            backgroundColor: grey[800],
-            my: 0.3,
-            mx: 2,
-            borderRadius: 2,
-          }}
-          {...a11yProps(4)}
-        />
-        <Tab
-          label="ارتباط با من"
-          icon={<CallRounded />}
-          iconPosition="start"
-          sx={{
-            color: "white",
-            "&.MuiTab-root": { minHeight: 48 },
-            backgroundColor: grey[800],
-            my: 0.3,
-            mx: 2,
-            borderRadius: 2,
-          }}
-          {...a11yProps(5)}
-        />
+        ))}
+      
+       
       </Tabs>
     </>
   );
