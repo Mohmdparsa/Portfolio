@@ -1,7 +1,7 @@
 import { Typography , Box } from "@mui/material";
 import { useContext } from "react";
 import { MainContext } from "../../Context/Index";
-const TabPanel = (props) => {
+const Page = (props) => {
   const { children, index, ...other } = props;
   const {pageNumber}=useContext(MainContext)
 
@@ -23,4 +23,4 @@ const TabPanel = (props) => {
   );
 };
 
-export default TabPanel;
+export default Page;
