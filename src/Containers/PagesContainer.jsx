@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Unstable_Grid2";
-const ContentContainer = ({ children }) => {
+const PagesContainer = ({ children }) => {
   return (
     <Grid
       xs={12}
@@ -14,4 +14,4 @@ const ContentContainer = ({ children }) => {
   );
 };
 
-export default ContentContainer;
+export default PagesContainer;
