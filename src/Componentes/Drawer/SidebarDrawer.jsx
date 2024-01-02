@@ -1,26 +1,28 @@
-import { Drawer } from "@mui/material"
-import { useState } from "react";
+import { Drawer } from "@mui/material";
 import SidebarContent from "../Sidebar/SidebarContent";
-const SidebarDrawer = (value , handleChange)=>{
-    const [open, setOpen] = useState(false);
-    return(
-        <>
-                <Drawer
-          open={open}
-          variant="temporary"
-          onClose={() => setOpen(false)}
-          sx={{
-            "& .MuiDrawer-paper": {
-              width: 300,
-              backgroundColor: "secondary.main",
-              color: "white",
-            },
-          }}
-        >
-          <SidebarContent value={value} handleChange={handleChange} />
-        </Drawer>
-        </>
-    )
-}
+import { useContext } from "react";
+import {MainContext} from "../../Context/Index";
+const SidebarDrawer = () => {
+  const { setDrawerOpen, drawerOpen } = useContext(MainContext);
 
-export default SidebarDrawer
+  return (
+    <>
+      <Drawer
+        open={drawerOpen}
+        variant="temporary"
+        onClose={() => setDrawerOpen(false)}
+        sx={{
+          "& .MuiDrawer-paper": {
+            width: 300,
+            backgroundColor: "secondary.main",
+            color: "white",
+          },
+        }}
+      >
+        <SidebarContent />
+      </Drawer>
+    </>
+  );
+};
+
+export default SidebarDrawer;
