@@ -8,13 +8,17 @@ import {
   ThreePRounded,
   CallRounded,
 } from "@mui/icons-material";
-const SidebarTabs = ({ value, handleChange }) => {
-    const a11yProps = (index) => {
-        return {
-          id: `vertical-tab-${index}`,
-          "aria-controls": `vertical-tabpanel-${index}`,
-        };
-      };
+import { useContext } from "react";
+import { MainContext } from "../../Context/Index";
+const SidebarTabs = () => {
+  const { pageNumber, handlePageNumber, drawerOpen, setDrawerOpen } =
+    useContext(MainContext);
+  const a11yProps = (index) => {
+    return {
+      id: `vertical-tab-${index}`,
+      "aria-controls": `vertical-tabpanel-${index}`,
+    };
+  };
   return (
     <>
       <Tabs
@@ -22,8 +26,8 @@ const SidebarTabs = ({ value, handleChange }) => {
         scrollButtons="auto"
         allowScrollButtonsMobile
         orientation="vertical"
-        value={value}
-        onChange={handleChange}
+        value={pageNumber}
+        onChange={handlePageNumber}
       >
         <Tab
           label="صفحه اصلی"
