@@ -2,9 +2,11 @@ import { Tab, Tabs } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useContext } from "react";
 import { MainContext } from "../../Context/Index";
+import { TabsData } from "../Helpers/TabDataSidebar";
 const SidebarTabs = () => {
   const { pageNumber, handlePageNumber, drawerOpen, setDrawerOpen } =
     useContext(MainContext);
+    const TabData = TabsData()
 
   return (
     <>
@@ -16,7 +18,7 @@ const SidebarTabs = () => {
         value={pageNumber}
         onChange={handlePageNumber}
       >
-        {tabs.map((tab, index) => (
+        {TabData.map((tab, index) => (
           <Tab
             key={index}
             label={tab.label}
