@@ -3,7 +3,7 @@ import Sidebar from "../Componentes/Sidebar/Sidebar";
 import PageContainer from "./PagesContainer";
 import { useState } from "react";
 import Page from "../Componentes/Tabs/Page";
-import { Typography } from "@mui/material";
+import { Typography , Box} from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 
