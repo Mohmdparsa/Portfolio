@@ -4,33 +4,35 @@ import { red } from "@mui/material/colors";
 import { Box } from "@mui/material";
 import { useContext } from "react";
 import { MainContext } from "../../Context/Index";
-const DrawerActionButton = ()=>{
-  const {setDrawerOpen} = useContext(MainContext)
-    return(
-        <>
-            
-            <Box
-          sx={{
-            display: {
-              xs: "block",
-              sm: "block",
-              md: "none",
-              lg: "none",
-              xl: "none",
-            },
+const DrawerActionButton = () => {
+  const { setDrawerOpen } = useContext(MainContext);
+  return (
+    <>
+      <Box
+        sx={{
+          position: "absolute",
+          display: {
+            xs: "block",
+            sm: "block",
+            md: "none",
+            lg: "none",
+            xl: "none",
+          },
+        }}
+      >
+        <Fab
+          aria-label="Sidebar"
+          size="small"
+          sx={{ m: 2, color: red[500] }}
+          onClick={() => {
+            setDrawerOpen(true);
           }}
         >
-          <Fab
-            aria-label="Sidebar"
-            size="small"
-            sx={{ m: 2, color: red[500] }}
-            onClick={()=>{setDrawerOpen(true)}}
-          >
-            <MenuRounded />
-          </Fab>
-        </Box>
-        </>
-    )
-}
+          <MenuRounded />
+        </Fab>
+      </Box>
+    </>
+  );
+};
 
-export default DrawerActionButton
+export default DrawerActionButton;
