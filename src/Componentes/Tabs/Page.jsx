@@ -15,8 +15,8 @@ const Page = (props) => {
     >
    
       {pageNumber === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography >{children}</Typography>
+        <Box sx={{  height:"100vh" , overflow: "hidden"}}>
+          {children}
         </Box>
       )}
     </div>
