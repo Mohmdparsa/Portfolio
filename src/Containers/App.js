@@ -3,7 +3,7 @@ import Sidebar from "../Componentes/Sidebar/Sidebar";
 import PageContainer from "./PagesContainer";
 import { useState } from "react";
 import Page from "../Componentes/Tabs/Page";
-import { Typography , Box} from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 
@@ -21,14 +21,28 @@ function App() {
       <div className="App">
         <Layout>
           <SidebarContainers>
-            <Sidebar pageNumber={pageNumber} handlePageNumber={handlePageNumber} />
+            <Sidebar
+              pageNumber={pageNumber}
+              handlePageNumber={handlePageNumber}
+            />
           </SidebarContainers>
 
           <PageContainer>
             <Page pageNumber={pageNumber} index={0}>
-              <Typography variant="h3" sx={{ textAlign: "center" }}>
+              <Box
+                sx={{
+                  backgroundImage: `url(${require("../Assets/PageImage1.jpg")})`,
+                  height: "100vh", 
+                  backgroundSize:"cover",
+                  backgroundPosition:"center",
+                  backgroundRepeat:"no-repeat",
+                }}
+              >
+                <Typography variant="h3" sx={{ textAlign: "center" , color:"primary.main" , paddingTop:"20px" }}>
                 صفحه اصلی
-              </Typography>
+              </Typography>  
+              </Box>
+            
             </Page>
             <Page pageNumber={pageNumber} index={1}>
               <Typography variant="h3" sx={{ textAlign: "center" }}>
