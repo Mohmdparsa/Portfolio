@@ -6,6 +6,7 @@ import Page from "../Pages/Components/Page";
 import { Typography, Box } from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
+import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
@@ -26,23 +27,30 @@ function App() {
               handlePageNumber={handlePageNumber}
             />
           </SidebarContainers>
+          <DrawerActionButton />
 
           <PageContainer>
             <Page pageNumber={pageNumber} index={0}>
               <Box
                 sx={{
                   backgroundImage: `url(${require("../Assets/PageImage1.jpg")})`,
-                  height: "100vh", 
-                  backgroundSize:"cover",
-                  backgroundPosition:"center",
-                  backgroundRepeat:"no-repeat",
+                  height: "100vh",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
-                <Typography variant="h3" sx={{ textAlign: "center" , color:"primary.main" , paddingTop:"20px" }}>
-                صفحه اصلی
-              </Typography>  
+                <Typography
+                  variant="h3"
+                  sx={{
+                    textAlign: "center",
+                    color: "primary.main",
+                    paddingTop: "20px",
+                  }}
+                >
+                  صفحه اصلی
+                </Typography>
               </Box>
-            
             </Page>
             <Page pageNumber={pageNumber} index={1}>
               <Typography variant="h3" sx={{ textAlign: "center" }}>
