@@ -7,6 +7,7 @@ import { Typography, Box } from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
+import SwipeableViews from 'react-swipeable-views';
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
@@ -30,7 +31,11 @@ function App() {
           <DrawerActionButton />
 
           <PageContainer>
-            <Page pageNumber={pageNumber} index={0}>
+            <SwipeableViews 
+            index={pageNumber}
+            onChangeIndex={handlePageNumber}
+            >
+                   <Page pageNumber={pageNumber} index={0}>
               <Box
                 sx={{
                   backgroundImage: `url(${require("../Assets/PageImage1.jpg")})`,
@@ -77,6 +82,8 @@ function App() {
                 ارتباط با من
               </Typography>
             </Page>
+            </SwipeableViews>
+       
           </PageContainer>
         </Layout>
       </div>
