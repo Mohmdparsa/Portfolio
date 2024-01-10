@@ -2,7 +2,7 @@ import Layout from "../Layouts/MainLayout";
 import Sidebar from "../Componentes/Sidebar/Sidebar";
 import PageContainer from "./PagesContainer";
 import { useState } from "react";
-import Page from "../Componentes/Tabs/Page";
+import Page from "../Pages/Components/Page";
 import { Typography, Box } from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
