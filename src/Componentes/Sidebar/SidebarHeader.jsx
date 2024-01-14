@@ -1,10 +1,11 @@
 import { Typography , Avatar , Hidden , Divider } from "@mui/material"
+import portfolioImage from "../../Assets/portfolio-image.jpg"
 const SidebarHeader = ()=>{
     return(
         <>
              <Hidden mdDown>
           <Avatar
-            src={require("../../Assets/portfolio-image.jpg")}
+            src={portfolioImage}
             sx={{
               height: "150px",
               width: "153px",
