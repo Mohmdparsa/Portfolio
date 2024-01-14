@@ -8,6 +8,7 @@ import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
 import SwipeableViews from 'react-swipeable-views';
+import PageImage1 from "../Assets/PageImage1.jpg"
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
@@ -38,7 +39,7 @@ function App() {
                    <Page pageNumber={pageNumber} index={0}>
               <Box
                 sx={{
-                  backgroundImage: `url(${require("../Assets/PageImage1.jpg")})`,
+                  backgroundImage: `url(${PageImage1})`,
                   height: "100vh",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
