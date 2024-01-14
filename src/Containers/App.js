@@ -8,6 +8,7 @@ import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
 import SwipeableViews from 'react-swipeable-views';
+import {Home} from "../Pages/Index"
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
             onChangeIndex={handlePageNumber}
             >
                    <Page pageNumber={pageNumber} index={0}>
-                    {/* Home */}
+                    <Home/>
           
             </Page>
             <Page pageNumber={pageNumber} index={1}>
