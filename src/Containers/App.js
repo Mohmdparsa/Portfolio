@@ -3,12 +3,12 @@ import Sidebar from "../Componentes/Sidebar/Sidebar";
 import PageContainer from "./PagesContainer";
 import { useState } from "react";
 import Page from "../Pages/Components/Page";
-import { Typography, Box } from "@mui/material";
+import { Typography } from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
 import SwipeableViews from 'react-swipeable-views';
-import PageImage1 from "../Assets/PageImage1.jpg"
+
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
@@ -37,26 +37,8 @@ function App() {
             onChangeIndex={handlePageNumber}
             >
                    <Page pageNumber={pageNumber} index={0}>
-              <Box
-                sx={{
-                  backgroundImage: `url(${PageImage1})`,
-                  height: "100vh",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              >
-                <Typography
-                  variant="h3"
-                  sx={{
-                    textAlign: "center",
-                    color: "primary.main",
-                    paddingTop: "20px",
-                  }}
-                >
-                  صفحه اصلی
-                </Typography>
-              </Box>
+                    {/* Home */}
+          
             </Page>
             <Page pageNumber={pageNumber} index={1}>
               <Typography variant="h3" sx={{ textAlign: "center" }}>
