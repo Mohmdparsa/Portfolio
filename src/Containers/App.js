@@ -8,7 +8,7 @@ import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
 import SwipeableViews from 'react-swipeable-views';
-import {Home} from "../Pages/Index"
+import {Home , About} from "../Pages/Index"
 
 
 function App() {
@@ -42,9 +42,7 @@ function App() {
           
             </Page>
             <Page pageNumber={pageNumber} index={1}>
-              <Typography variant="h3" sx={{ textAlign: "center" }}>
-                درباره من
-              </Typography>
+            <About/>
             </Page>
             <Page pageNumber={pageNumber} index={2}>
               <Typography variant="h3" sx={{ textAlign: "center" }}>
