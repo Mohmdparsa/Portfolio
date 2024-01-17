@@ -7,7 +7,7 @@ const PagesContainer = ({ children }) => {
       md={9}
       lg={9}
       xl={9}
-      sx={{ backgroundColor: "primary.main", textAlign: "center" }}
+      sx={{ backgroundColor: "whitesmoke", textAlign: "center" }}
     >
       {children}
     </Grid>
