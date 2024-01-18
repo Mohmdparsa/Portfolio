@@ -1,4 +1,5 @@
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+import { Typography } from '@mui/material';
 const DevInfo = ()=>{
     return(
         <>
