@@ -12,6 +12,7 @@ import DevInfo from "./Components/DevInfo";
 import Avatar02 from "../Assets/Avatar02.jpg";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
 import PsychologyRoundedIcon from '@mui/icons-material/PsychologyRounded';
+import Skill from "./Components/Skill";
 
 const About = () => {
   return (
@@ -90,6 +91,7 @@ const About = () => {
                   sx={{ p: 3 }}
                 />
               </Divider>
+              <Skill/>
             </Grid>
           </Grid>
         </CardContent>
