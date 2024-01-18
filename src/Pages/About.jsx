@@ -8,10 +8,10 @@ import {
   Chip,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import { grey } from "@mui/material/colors";
+import DevInfo from "./Components/DevInfo";
 import Avatar02 from "../Assets/Avatar02.jpg";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
-import CodeRounded from "@mui/icons-material/CodeRounded";
+
 const About = () => {
   return (
     <>
@@ -42,6 +42,9 @@ const About = () => {
                   sx={{ p: 3 }}
                 />
               </Divider>
+              <DevInfo>نام و نام خانوادگی : امیرعلی آذرمنش</DevInfo>
+              <DevInfo>سن : 25</DevInfo>
+              <DevInfo>شهر : تهران</DevInfo>
             </Grid>
 
             <Grid xs={0} sm={0} md={4} lg={4} xl={4}>
