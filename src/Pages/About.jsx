@@ -1,6 +1,5 @@
 import {
   Typography,
-  Box,
   Card,
   CardContent,
   Divider,
@@ -11,12 +10,47 @@ import Grid from "@mui/material/Unstable_Grid2";
 import DevInfo from "./Components/DevInfo";
 import Avatar02 from "../Assets/Avatar02.jpg";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
-import PsychologyRoundedIcon from '@mui/icons-material/PsychologyRounded';
+import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
 import Skill from "./Components/Skill";
 import { devSkill } from "../Constans/Skill";
+import { useState , useEffect} from "react";
 
 const About = () => {
-  const { htmlSkill , cssSkill ,  jsSkill ,  reactSkill}=devSkill 
+  const { htmlSkill, cssSkill, jsSkill, reactSkill } = devSkill;
+  const [javascript , setJavascript] = useState(0);
+  const [html  , setHtml] = useState(0);
+  const [css , setCss] = useState(0);
+  const [react , setReact] = useState(0)
+
+ 
+    
+useEffect(()=>{
+  const timer = setInterval(()=>{
+    setJavascript(oldProgress=>{
+      const diff = Math.floor(Math.random()*10)
+      return Math.min(oldProgress+diff , 50)
+    })
+    setHtml(oldProgress=>{
+      const diff = Math.floor(Math.random()*10)
+      return Math.min(oldProgress+diff , 90)
+    })
+    setCss(oldProgress=>{
+      const diff = Math.floor(Math.random()*10)
+      return Math.min(oldProgress+diff , 87)
+    })
+    setReact(oldProgress=>{
+      const diff = Math.floor(Math.random()*10)
+      return Math.min(oldProgress+diff , 50)
+    })
+    
+    return ()=>{
+      clearInterval(timer)
+    }
+
+  },200)
+
+},[])
+
   return (
     <>
       <Card
@@ -74,8 +108,8 @@ const About = () => {
             </Grid>
           </Grid>
           <Grid container>
-            <Grid sx={{width:1 , mt:1}}>
-            <Divider textAlign="center">
+            <Grid sx={{ width: 1, mt: 1 }}>
+              <Divider textAlign="center">
                 <Chip
                   icon={<PsychologyRoundedIcon />}
                   label={
@@ -93,10 +127,10 @@ const About = () => {
                   sx={{ p: 3 }}
                 />
               </Divider>
-              <Skill name={htmlSkill.name} icon={htmlSkill.icon} value={95}/>
-              <Skill name={cssSkill.name} icon={cssSkill.icon} value={90}/>
-              <Skill name={jsSkill.name} icon={jsSkill.icon} value={60}/>
-              <Skill name={reactSkill.name} icon={reactSkill.icon} value={50}/>
+              <Skill name={htmlSkill.name} icon={htmlSkill.icon} value={html} />
+              <Skill name={cssSkill.name} icon={cssSkill.icon} value={css} />
+              <Skill name={jsSkill.name} icon={jsSkill.icon} value={javascript} />
+              <Skill name={reactSkill.name} icon={reactSkill.icon} value={react} />
             </Grid>
           </Grid>
         </CardContent>
