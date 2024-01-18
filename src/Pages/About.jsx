@@ -93,10 +93,10 @@ const About = () => {
                   sx={{ p: 3 }}
                 />
               </Divider>
-              <Skill name={htmlSkill.name} icon={htmlSkill.icon} value={95 + "%"}/>
-              <Skill name={cssSkill.name} icon={cssSkill.icon} value={90 + "%"}/>
-              <Skill name={jsSkill.name} icon={jsSkill.icon} value={60 + "%"}/>
-              <Skill name={reactSkill.name} icon={reactSkill.icon} value={50 + "%"}/>
+              <Skill name={htmlSkill.name} icon={htmlSkill.icon} value={95}/>
+              <Skill name={cssSkill.name} icon={cssSkill.icon} value={90}/>
+              <Skill name={jsSkill.name} icon={jsSkill.icon} value={60}/>
+              <Skill name={reactSkill.name} icon={reactSkill.icon} value={50}/>
             </Grid>
           </Grid>
         </CardContent>
