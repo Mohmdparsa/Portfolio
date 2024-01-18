@@ -13,8 +13,10 @@ import Avatar02 from "../Assets/Avatar02.jpg";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
 import PsychologyRoundedIcon from '@mui/icons-material/PsychologyRounded';
 import Skill from "./Components/Skill";
+import { devSkill } from "../Constans/Skill";
 
 const About = () => {
+  const { htmlSkill , cssSkill ,  jsSkill ,  reactSkill}=devSkill 
   return (
     <>
       <Card
@@ -91,7 +93,10 @@ const About = () => {
                   sx={{ p: 3 }}
                 />
               </Divider>
-              <Skill/>
+              <Skill name={htmlSkill.name} icon={htmlSkill.icon} value={95 + "%"}/>
+              <Skill name={cssSkill.name} icon={cssSkill.icon} value={90 + "%"}/>
+              <Skill name={jsSkill.name} icon={jsSkill.icon} value={60 + "%"}/>
+              <Skill name={reactSkill.name} icon={reactSkill.icon} value={50 + "%"}/>
             </Grid>
           </Grid>
         </CardContent>
