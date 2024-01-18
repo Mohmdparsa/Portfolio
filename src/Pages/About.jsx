@@ -11,6 +11,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import DevInfo from "./Components/DevInfo";
 import Avatar02 from "../Assets/Avatar02.jpg";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
+import PsychologyRoundedIcon from '@mui/icons-material/PsychologyRounded';
 
 const About = () => {
   return (
@@ -67,6 +68,28 @@ const About = () => {
                   },
                 }}
               ></Avatar>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid sx={{width:1 , mt:1}}>
+            <Divider textAlign="center">
+                <Chip
+                  icon={<PsychologyRoundedIcon />}
+                  label={
+                    <Typography
+                      sx={{
+                        textAlign: "center",
+                        variant: "body1",
+                        color: "black",
+                      }}
+                    >
+                      مهارت های من
+                    </Typography>
+                  }
+                  size="small"
+                  sx={{ p: 3 }}
+                />
+              </Divider>
             </Grid>
           </Grid>
         </CardContent>
