@@ -12,7 +12,7 @@ const Skill = ({ icon, value, name }) => {
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Box sx={{ minWidth: "35" }}>
           <Typography variant="body2" sx={{ mt: 2 }}>
-            {value}
+            {value}%
           </Typography>
         </Box>
 
