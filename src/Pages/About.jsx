@@ -57,6 +57,7 @@ useEffect(()=>{
         sx={{
           height: "100vh",
           backgroundColor: "whitesmoke",
+          overflowY:"scroll",
         }}
       >
         <CardContent>
