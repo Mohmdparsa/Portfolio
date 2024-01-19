@@ -1,10 +1,12 @@
 import { Typography , Box , Divider   } from "@mui/material";
 import { FavoriteRounded , CopyrightRounded } from "@mui/icons-material";
+import SocialMedia from "./SocialMedia";
 
 const SidebarFooter = () => {
     return (
       <>
-       <Divider variant="middle" color="grey" sx={{ mt: "10px" }} />
+       <Divider variant="middle" color="grey" sx={{ mt: "10px" }} /> 
+       <SocialMedia/>
         <Box
           sx={{
             flexGrow: 1,
@@ -12,10 +14,11 @@ const SidebarFooter = () => {
             flexDirection: "column",
             justifyContent: "end",
             alignItems: "center",
-            height: "80px",
+            height: "67px",
             mb: "12px",
           }}
-        >
+        >  
+       
           <Typography variant="subtitle1">
             طراحی شده با
             <FavoriteRounded
@@ -27,6 +30,7 @@ const SidebarFooter = () => {
             <CopyrightRounded sx={{ alignItems: "middle", ml: "7px" }} />
           </Typography>
         </Box>
+      
       
       </>
     )
