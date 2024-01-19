@@ -1,4 +1,11 @@
-import { Divider, Chip, Box, Typography, LinearProgress } from "@mui/material";
+import {
+  Divider,
+  Chip,
+  Box,
+  Typography,
+  LinearProgress,
+  Badge,
+} from "@mui/material";
 const Skill = ({ icon, value, name }) => {
   return (
     <>
@@ -10,9 +17,9 @@ const Skill = ({ icon, value, name }) => {
         ></Chip>
       </Divider>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Box sx={{ minWidth: "35" }}>
+        <Box sx={{ minWidth: "35" , mr:2 }}>
           <Typography variant="body2" sx={{ mt: 2 }}>
-            {value}%
+            <Badge variant="standard" color="secondary" badgeContent={`${value}%`} />
           </Typography>
         </Box>
 
@@ -20,7 +27,7 @@ const Skill = ({ icon, value, name }) => {
           <LinearProgress
             variant="determinate"
             value={value}
-            sx={{ height: 10 ,borderRadius:"10px" }}
+            sx={{ height: 10, borderRadius: "10px" }}
           />
         </Box>
       </Box>
