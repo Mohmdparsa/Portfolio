@@ -14,6 +14,7 @@ import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
 import Skill from "./Components/Skill";
 import { devSkill } from "../Constans/Skill";
 import { useState , useEffect} from "react";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const { htmlSkill, cssSkill, jsSkill, reactSkill } = devSkill;
@@ -60,6 +61,9 @@ useEffect(()=>{
           overflowY:"scroll",
         }}
       >
+           <Helmet>
+          <title>وب سایت امیرعلی آذرمنش | درباره من</title>
+        </Helmet>
         <CardContent>
           <Grid container sx={{ mx: 3 }}>
             <Grid xs={12} sm={12} md={8} lg={8} xl={8}>
