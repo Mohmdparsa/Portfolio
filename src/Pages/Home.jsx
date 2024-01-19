@@ -6,6 +6,7 @@ import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { Links } from "../Constans/Particles";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const nameEl = useRef(null);
@@ -54,6 +55,9 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
+        <Helmet>
+          <title>وب سایت امیرعلی آذرمنش | صفحه اصلی</title>
+        </Helmet>
         <Particles
           id="tsparticles"
           init={particlesInit}
