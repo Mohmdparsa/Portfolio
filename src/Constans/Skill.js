@@ -1,7 +1,5 @@
-import HtmlIcon from "../Assets/Icons/icons8-html.svg";
-import CssIcons from "../Assets/Icons/icons8-css.svg";
-import JsIcons from "../Assets/Icons/icons8-js.svg";
-import ReactJsIcons from "../Assets/Icons/icons8-react-native.svg";
+
+import {HtmlIcon , CssIcons , JsIcons , ReactJsIcons} from "../Assets/Icons/Index"
  export const devSkill = {
     htmlSkill : {
         name:"HTMl",
