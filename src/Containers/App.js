@@ -1,7 +1,7 @@
 import Layout from "../Layouts/MainLayout";
 import Sidebar from "../Componentes/Sidebar/Sidebar";
 import PageContainer from "./PagesContainer";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import Page from "../Pages/Components/Page";
 import { Typography } from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
@@ -9,6 +9,8 @@ import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
 import SwipeableViews from 'react-swipeable-views';
 import {Home , About} from "../Pages/Index"
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 function App() {
@@ -18,6 +20,16 @@ function App() {
   const handlePageNumber = (event, newValue) => {
     setPageNumber(newValue);
   };
+
+ 
+    const theme = useTheme();
+    const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
+    useEffect(()=>{
+      if(isMdUp){
+         setDrawerOpen(false)
+      }
+    },[isMdUp])
+
   return (
     <MainContext.Provider
       value={{ pageNumber, handlePageNumber, drawerOpen, setDrawerOpen }}
