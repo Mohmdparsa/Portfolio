@@ -13,6 +13,8 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 
+
+
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -50,16 +52,13 @@ function App() {
             onChangeIndex={handlePageNumber}
             >
                    <Page pageNumber={pageNumber} index={0}>
-                    <Home/>
+                    <Home helmetTitle="وب سایت شخصی امیرعلی آذرمنش"/>
           
             </Page>
             <Page pageNumber={pageNumber} index={1}>
-            <About/>
+            <About helmetTitle="وب سایت شخصی | درباره من"/>
             </Page>
             <Page pageNumber={pageNumber} index={2}>
-              <Typography variant="h3" sx={{ textAlign: "center" }}>
-                رزومه من
-              </Typography>
             </Page>
             <Page pageNumber={pageNumber} index={3}>
               <Typography variant="h3" sx={{ textAlign: "center" }}>
