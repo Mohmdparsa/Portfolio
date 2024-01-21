@@ -16,7 +16,7 @@ import { devSkill } from "../Constans/Skill";
 import { useState , useEffect} from "react";
 import { Helmet } from "react-helmet-async";
 
-const About = () => {
+const About = ({helmetTitle}) => {
   const { htmlSkill, cssSkill, jsSkill, reactSkill } = devSkill;
   const [javascript , setJavascript] = useState(0);
   const [html  , setHtml] = useState(0);
@@ -62,7 +62,7 @@ useEffect(()=>{
         }}
       >
            <Helmet>
-          <title>وب سایت امیرعلی آذرمنش | درباره من</title>
+          <title>{helmetTitle}</title>
         </Helmet>
         <CardContent>
           <Grid container sx={{ mx: 3 }}>
