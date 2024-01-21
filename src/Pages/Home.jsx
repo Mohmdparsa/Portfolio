@@ -8,7 +8,7 @@ import { loadFull } from "tsparticles";
 import { Links } from "../Constans/Particles";
 import { Helmet } from "react-helmet-async";
 
-const Home = () => {
+const Home = ({helmetTitle}) => {
   const nameEl = useRef(null);
   const infoEl = useRef(null);
   const strings = [
@@ -56,7 +56,7 @@ const Home = () => {
         }}
       >
         <Helmet>
-          <title>وب سایت امیرعلی آذرمنش | صفحه اصلی</title>
+          <title>{helmetTitle}</title>
         </Helmet>
         <Particles
           id="tsparticles"
