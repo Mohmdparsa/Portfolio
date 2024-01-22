@@ -8,7 +8,7 @@ import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
 import SwipeableViews from 'react-swipeable-views';
-import {Home , About} from "../Pages/Index"
+import {Home , About , MyPortfolio} from "../Pages/Index"
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -59,18 +59,14 @@ function App() {
             <About helmetTitle="وب سایت شخصی | درباره من"/>
             </Page>
             <Page pageNumber={pageNumber} index={2}>
+          <MyPortfolio helmetTitle="وب سایت شخصی | نمونه کارها"/>
             </Page>
             <Page pageNumber={pageNumber} index={3}>
-              <Typography variant="h3" sx={{ textAlign: "center" }}>
-                نمونه کارها
-              </Typography>
-            </Page>
-            <Page pageNumber={pageNumber} index={4}>
               <Typography variant="h3" sx={{ textAlign: "center" }}>
                 نظرات
               </Typography>
             </Page>
-            <Page pageNumber={pageNumber} index={5}>
+            <Page pageNumber={pageNumber} index={4}>
               <Typography variant="h3" sx={{ textAlign: "center" }}>
                 ارتباط با من
               </Typography>
