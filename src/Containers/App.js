@@ -8,7 +8,7 @@ import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
 import SwipeableViews from 'react-swipeable-views';
-import {Home , About , MyPortfolio} from "../Pages/Index"
+import {Home , About , MyPortfolio , Comments} from "../Pages/Index"
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -62,9 +62,8 @@ function App() {
           <MyPortfolio helmetTitle="وب سایت شخصی | نمونه کارها"/>
             </Page>
             <Page pageNumber={pageNumber} index={3}>
-              <Typography variant="h3" sx={{ textAlign: "center" }}>
-                نظرات
-              </Typography>
+              <Comments helmetTitle="وب سایت شخصی | نظرات دانشجویان"/>
+          
             </Page>
             <Page pageNumber={pageNumber} index={4}>
               <Typography variant="h3" sx={{ textAlign: "center" }}>
