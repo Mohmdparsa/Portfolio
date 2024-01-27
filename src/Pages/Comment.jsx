@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import { ForumRounded } from "@mui/icons-material";
 import {userComments} from "../Constans/Details"
-import Slider from "react-slick";
 const Comments = ({ helmetTitle, children }) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -21,16 +20,6 @@ const Comments = ({ helmetTitle, children }) => {
       setLoading(false);
     };
   }, []);
-
-  const options = {
-    dots:true,
-    arrows:true,
-    infinite:true,
-    autoplay:true,
-    autoplaySpeed: 4000,
-    pauseOnHover:true,
-    cssEase:"linear"
-  }
   return (
     <>
       <Card
@@ -65,7 +54,6 @@ const Comments = ({ helmetTitle, children }) => {
             </Divider>
           </Slide>
           <Box component="div" sx={{mt:10 , justifyContent:"center", alignItems:"center"}}>
-            <Slider {...options}>
             {
             userComments.map((user , index)=>(
             <Box key={index} component="div" sx={{justifyContent:"center"}}>
@@ -90,9 +78,6 @@ const Comments = ({ helmetTitle, children }) => {
             </Box>
             ))
             }
-
-
-            </Slider>
            
           </Box>
 
