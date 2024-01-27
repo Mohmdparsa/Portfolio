@@ -59,6 +59,7 @@ useEffect(()=>{
           height: "100vh",
           backgroundColor: "whitesmoke",
           overflowY:"scroll",
+          direction:"rtl"
         }}
       >
            <Helmet>
