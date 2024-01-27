@@ -7,7 +7,6 @@ import { Typography } from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
-import SwipeableViews from 'react-swipeable-views';
 import {Home , About , MyPortfolio , Comments} from "../Pages/Index"
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -47,10 +46,6 @@ function App() {
           <DrawerActionButton />
 
           <PageContainer>
-            <SwipeableViews 
-            index={pageNumber}
-            onChangeIndex={handlePageNumber}
-            >
                    <Page pageNumber={pageNumber} index={0}>
                     <Home helmetTitle="وب سایت شخصی امیرعلی آذرمنش"/>
           
@@ -70,7 +65,6 @@ function App() {
                 ارتباط با من
               </Typography>
             </Page>
-            </SwipeableViews>
        
           </PageContainer>
         </Layout>
