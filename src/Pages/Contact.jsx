@@ -112,6 +112,24 @@ const Contact = ({ helmetTitle }) => {
                                 }}
                               />
                             </Grid>
+                            <Grid xs={12} md={6}>
+                              <TextField
+                                margin="normal"
+                                fullWidth
+                                size="small"
+                                color="warning"
+                                label="عنوان"
+                                name="subject"
+                                variant="outlined"
+                                InputProps={{
+                                  endAdornment: (
+                                    <InputAdornment position="end">
+                                      <SubjectRounded />
+                                    </InputAdornment>
+                                  ),
+                                }}
+                              />
+                            </Grid>
 
                             <Grid xs={12} md={12}>
                               <TextField
