@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
-import {Home , About , MyPortfolio , Comments} from "../Pages/Index"
+import {Home , About , MyPortfolio , Comments , Contact} from "../Pages/Index"
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -61,9 +61,7 @@ function App() {
           
             </Page>
             <Page pageNumber={pageNumber} index={4}>
-              <Typography variant="h3" sx={{ textAlign: "center" }}>
-                ارتباط با من
-              </Typography>
+              <Contact helmetTitle={"وب سایت شخصی | ارتباط با من"}/>
             </Page>
        
           </PageContainer>
