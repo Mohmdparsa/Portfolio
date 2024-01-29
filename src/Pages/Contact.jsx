@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { useFormik } from "formik";
 import { useTheme } from "@mui/material/styles";
+import { ContactValidationSchema } from "./Validations/ContactValidation";
 import {
   Typography,
   Card,
@@ -32,6 +34,21 @@ const Contact = ({ helmetTitle }) => {
       setLoading(false);
     };
   }, []);
+
+  const contactInputName = {
+    fullname: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const formik = useFormik({
+    initialValues: contactInputName,
+    onSubmit: (values) => {
+      console.log("Form Values:", values);
+    },
+    validationSchema: ContactValidationSchema,
+  });
   return (
     <>
       <Card
@@ -70,7 +87,7 @@ const Contact = ({ helmetTitle }) => {
             >
               <Grid xs={12} sx={12} md={8}>
                 <Card sx={{ justifyContent: "center", alignItems: "center" }}>
-                  <form autoComplete="off">
+                  <form autoComplete="off" onSubmit={formik.handleSubmit}>
                     <CardContent>
                       <Grid container>
                         <Grid xs={12} sx={{ direction: "ltr" }}>
@@ -84,6 +101,16 @@ const Contact = ({ helmetTitle }) => {
                                 label="نام و نام خانوادگی"
                                 name="fullname"
                                 variant="outlined"
+                                helperText={
+                                  formik.touched.fullname
+                                    ? formik.errors.fullname
+                                    : null
+                                }
+                                error={Boolean(
+                                  formik.touched.fullname && formik.errors.fullname
+                                )}
+                                values={formik.values?.fullname}
+                                onChange={formik.handleChange}
                                 InputProps={{
                                   endAdornment: (
                                     <InputAdornment position="end">
@@ -103,6 +130,16 @@ const Contact = ({ helmetTitle }) => {
                                 label="آدرس ایمیل"
                                 name="email"
                                 variant="outlined"
+                                helperText={
+                                  formik.touched.email
+                                    ? formik.errors.email
+                                    : null
+                                }
+                                error={Boolean(
+                                  formik.touched.email && formik.errors.email
+                                )}
+                                values={formik.values?.email}
+                                onChange={formik.handleChange}
                                 InputProps={{
                                   endAdornment: (
                                     <InputAdornment position="end">
@@ -121,6 +158,16 @@ const Contact = ({ helmetTitle }) => {
                                 label="عنوان"
                                 name="subject"
                                 variant="outlined"
+                                helperText={
+                                  formik.touched.subject
+                                    ? formik.errors.subject
+                                    : null
+                                }
+                                error={Boolean(
+                                  formik.touched.subject && formik.errors.subject
+                                )}
+                                values={formik.values?.subject}
+                                onChange={formik.handleChange}
                                 InputProps={{
                                   endAdornment: (
                                     <InputAdornment position="end">
@@ -142,6 +189,16 @@ const Contact = ({ helmetTitle }) => {
                                 label="متن "
                                 name="message"
                                 variant="outlined"
+                                helperText={
+                                  formik.touched.message
+                                    ? formik.errors.message
+                                    : null
+                                }
+                                error={Boolean(
+                                  formik.touched.message && formik.errors.message
+                                )}
+                                values={formik.values?.message}
+                                onChange={formik.handleChange}
                               />
                             </Grid>
                           </Grid>
@@ -175,7 +232,10 @@ const Contact = ({ helmetTitle }) => {
                 <Typography
                   variant="h6"
                   color="black"
-                  sx={{ mt: 4, display: { sm: "none", md: "block" , xs:"none"} }}
+                  sx={{
+                    mt: 4,
+                    display: { sm: "none", md: "block", xs: "none" },
+                  }}
                 >
                   بیا در مورد همه چیز باهم صحبت کنیم
                 </Typography>
@@ -187,7 +247,7 @@ const Contact = ({ helmetTitle }) => {
                     display: {
                       sm: "none",
                       md: "block",
-                      xs:"none"
+                      xs: "none",
                     },
                   }}
                 >
