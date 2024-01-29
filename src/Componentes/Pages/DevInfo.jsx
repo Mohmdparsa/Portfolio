@@ -1,6 +1,6 @@
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import { Typography } from '@mui/material';
-const DevInfo = ({children})=>{
+const Info = ({children})=>{
     return(
         <>
           <Typography variant="body1" color="secondary.main" textAlign="left" sx={{mt:2}}
@@ -14,5 +14,16 @@ const DevInfo = ({children})=>{
         </>
     )
 }
+
+const DevInfo =()=>{
+    return(
+        <>
+          <Info>نام و نام خانوادگی : امیرعلی آذرمنش</Info>
+              <Info>سن : 25</Info>
+              <Info>شهر : تهران</Info>
+        </>
+    )
+}
+
 
 export default DevInfo
