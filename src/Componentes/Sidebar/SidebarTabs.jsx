@@ -2,11 +2,11 @@ import { Tab, Tabs } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useContext } from "react";
 import { MainContext } from "../../Context/Index";
-import { TabsData } from "../Helpers/TabDataSidebar";
+import { TabsData } from "../../Constans/TabsData";
 const SidebarTabs = () => {
   const { pageNumber, handlePageNumber, drawerOpen, setDrawerOpen } =
     useContext(MainContext);
-    const TabData = TabsData()
+  const TabData = TabsData();
 
   return (
     <>
