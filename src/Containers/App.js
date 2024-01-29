@@ -2,7 +2,7 @@ import Layout from "../Layouts/MainLayout";
 import Sidebar from "../Componentes/Sidebar/Sidebar";
 import PageContainer from "./PagesContainer";
 import { useState, useEffect } from "react";
-import Page from "../Pages/Components/Page";
+import {Page} from "../Componentes/Pages/Index"
 import SidebarContainers from "./SidebarContainers";
 import { MainContext } from "../Context/Index";
 import DrawerActionButton from "../Componentes/Drawer/DrawerActionButton";
