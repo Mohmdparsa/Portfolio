@@ -1,20 +1,18 @@
-import { Typography , Avatar , Hidden , Divider } from "@mui/material"
+import { Typography  , Hidden , Divider } from "@mui/material"
 import portfolioImage from "../../Assets/portfolio-image.jpg"
+import CustomAvatar from "../Common/CustomAvatar"
 const SidebarHeader = ()=>{
     return(
         <>
+        <CustomAvatar
+        avatar={portfolioImage}
+        size={200}
+        fallback="YG"
+         
+        
+        />
              <Hidden mdDown>
-          <Avatar
-            src={portfolioImage}
-            sx={{
-              height: "150px",
-              width: "153px",
-              margin: "0 auto",
-              mt: "15px",
-            }}
-          >
-            A A
-          </Avatar>
+       
         </Hidden>
         <Typography variant="h4" sx={{ mt: "15px" }}>
           امیرعلی آذرمنش
