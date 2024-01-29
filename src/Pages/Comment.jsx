@@ -1,16 +1,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import  CustomDivider  from "../Componentes/Common/CustomDivider";
-import {
-  Typography,
-  Avatar,
-  Card,
-  CardContent,
-  Divider,
-  Chip,
-  Slide,
-  Box,
-} from "@mui/material";
+import CustomDivider from "../Componentes/Common/CustomDivider";
+import { Typography, Avatar, Card, CardContent, Box } from "@mui/material";
 import { ForumRounded } from "@mui/icons-material";
 import { userComments } from "../Constans/Details";
 const Comments = ({ helmetTitle, children }) => {
