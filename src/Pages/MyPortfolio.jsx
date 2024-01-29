@@ -12,6 +12,7 @@ import {
   CardActions,
   Button,
 } from "@mui/material";
+import CustomDivider from "../Componentes/Common/CustomDivider";
 import Grid from "@mui/material/Unstable_Grid2";
 import { portfolioInfo } from "../Constans/MyPortfolioInfo";
 import { SchoolRounded } from "@mui/icons-material";
@@ -30,36 +31,20 @@ const MyPortfolio = ({ helmetTitle, children }) => {
           height: "100vh",
           backgroundColor: "whitesmoke",
           overflowY: "scroll",
-          direction:"rtl"
+          direction: "rtl",
         }}
       >
         <Helmet>
           <title>{helmetTitle}</title>
         </Helmet>
         <CardContent>
-          <Slide
-            direction="down"
-            in={loading}
-            style={{ transitionDelay: loading ? "100ms" : "0ms" }}
-          >
-            <Divider textAlign="center" sx={{ mb: 3 }}>
-              <Chip
-                icon={<SchoolRounded />}
-                color="primary"
-                label={
-                  <Typography
-                    variant="body1"
-                    color="black"
-                    sx={{ textAlign: "center" }}
-                  >
-                    نمومه کارها
-                  </Typography>
-                }
-                sx={{ p: 3 }}
-              ></Chip>
-            </Divider>
-          </Slide>
-
+          <CustomDivider
+            bColor="primary.main"
+            cColor="primary"
+            icon={<SchoolRounded />}
+            align="center"
+            text="نمونه کارها"
+          />
           <Grid container sx={{ p: 3 }}>
             {portfolioInfo.map((portfolio, index) => (
               <Grid
@@ -91,7 +76,7 @@ const MyPortfolio = ({ helmetTitle, children }) => {
                           {portfolio.title}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                        {portfolio.info}
+                          {portfolio.info}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
