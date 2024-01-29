@@ -7,50 +7,45 @@ import {
   Chip,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import DevInfo from "./Components/DevInfo";
 import Avatar02 from "../Assets/Avatar02.jpg";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
-import Skill from "./Components/Skill";
+import { Skill, DevInfo } from "../Componentes/Pages/Index";
 import { devSkill } from "../Constans/Skill";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
-const About = ({helmetTitle}) => {
+const About = ({ helmetTitle }) => {
   const { htmlSkill, cssSkill, jsSkill, reactSkill } = devSkill;
-  const [javascript , setJavascript] = useState(0);
-  const [html  , setHtml] = useState(0);
-  const [css , setCss] = useState(0);
-  const [react , setReact] = useState(0)
+  const [javascript, setJavascript] = useState(0);
+  const [html, setHtml] = useState(0);
+  const [css, setCss] = useState(0);
+  const [react, setReact] = useState(0);
 
- 
-    
-useEffect(()=>{
-  const timer = setInterval(()=>{
-    setJavascript(oldProgress=>{
-      const diff = Math.floor(Math.random()*10)
-      return Math.min(oldProgress+diff , 50)
-    })
-    setHtml(oldProgress=>{
-      const diff = Math.floor(Math.random()*10)
-      return Math.min(oldProgress+diff , 90)
-    })
-    setCss(oldProgress=>{
-      const diff = Math.floor(Math.random()*10)
-      return Math.min(oldProgress+diff , 87)
-    })
-    setReact(oldProgress=>{
-      const diff = Math.floor(Math.random()*10)
-      return Math.min(oldProgress+diff , 50)
-    })
-    
-    return ()=>{
-      clearInterval(timer)
-    }
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setJavascript((oldProgress) => {
+        const diff = Math.floor(Math.random() * 10);
+        return Math.min(oldProgress + diff, 50);
+      });
+      setHtml((oldProgress) => {
+        const diff = Math.floor(Math.random() * 10);
+        return Math.min(oldProgress + diff, 90);
+      });
+      setCss((oldProgress) => {
+        const diff = Math.floor(Math.random() * 10);
+        return Math.min(oldProgress + diff, 87);
+      });
+      setReact((oldProgress) => {
+        const diff = Math.floor(Math.random() * 10);
+        return Math.min(oldProgress + diff, 50);
+      });
 
-  },200)
-
-},[])
+      return () => {
+        clearInterval(timer);
+      };
+    }, 200);
+  }, []);
 
   return (
     <>
@@ -58,11 +53,11 @@ useEffect(()=>{
         sx={{
           height: "100vh",
           backgroundColor: "whitesmoke",
-          overflowY:"scroll",
-          direction:"rtl"
+          overflowY: "scroll",
+          direction: "rtl",
         }}
       >
-           <Helmet>
+        <Helmet>
           <title>{helmetTitle}</title>
         </Helmet>
         <CardContent>
@@ -135,8 +130,16 @@ useEffect(()=>{
               </Divider>
               <Skill name={htmlSkill.name} icon={htmlSkill.icon} value={html} />
               <Skill name={cssSkill.name} icon={cssSkill.icon} value={css} />
-              <Skill name={jsSkill.name} icon={jsSkill.icon} value={javascript} />
-              <Skill name={reactSkill.name} icon={reactSkill.icon} value={react} />
+              <Skill
+                name={jsSkill.name}
+                icon={jsSkill.icon}
+                value={javascript}
+              />
+              <Skill
+                name={reactSkill.name}
+                icon={reactSkill.icon}
+                value={react}
+              />
             </Grid>
           </Grid>
         </CardContent>
