@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import { useTheme } from "@mui/material/styles";
-import { ContactValidationSchema } from "./Validations/ContactValidation";
+import { ContactValidationSchema } from "../Validations/ContactValidation";
 import {
   Typography,
   Card,
