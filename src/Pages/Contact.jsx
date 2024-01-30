@@ -1,35 +1,15 @@
 import { useState, useEffect } from "react";
-import { useFormik } from "formik";
-import { useTheme } from "@mui/material/styles";
-import { ContactValidationSchema } from "../Validations/ContactValidation";
 import CustomDivider from "../Componentes/Common/CustomDivider";
-import {ContactForm} from "./Index"
-import {
-  Typography,
-  Card,
-  CardContent,
-  Slide,
-  InputAdornment,
-  CardActions,
-  Button,
-  Divider,
-  Chip,
-  TextField,
-} from "@mui/material";
+import { ContactForm } from "./Index";
+import { Typography, Card, CardContent, Slide } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import {
-  Face6Rounded,
-  SubjectRounded,
-  EmailRounded,
-  AccountCircle,
-} from "@mui/icons-material";
+import { AccountCircle } from "@mui/icons-material";
 
 import { Helmet } from "react-helmet-async";
-import { position } from "stylis";
 
 const Contact = ({ helmetTitle }) => {
   const [loading, setLoading] = useState(false);
-  const theme = useTheme();
+
   useEffect(() => {
     setLoading(true);
     return () => {
@@ -37,20 +17,6 @@ const Contact = ({ helmetTitle }) => {
     };
   }, []);
 
-  const contactInputName = {
-    fullname: "",
-    email: "",
-    subject: "",
-    message: "",
-  };
-
-  const formik = useFormik({
-    initialValues: contactInputName,
-    onSubmit: (values) => {
-      console.log("Form Values:", values);
-    },
-    validationSchema: ContactValidationSchema,
-  });
   return (
     <>
       <Card
@@ -83,7 +49,7 @@ const Contact = ({ helmetTitle }) => {
             >
               <Grid xs={12} sx={12} md={8}>
                 <Card sx={{ justifyContent: "center", alignItems: "center" }}>
-                  <ContactForm/>
+                  <ContactForm />
                 </Card>
               </Grid>
             </Slide>
