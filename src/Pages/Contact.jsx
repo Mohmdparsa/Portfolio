@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import { useTheme } from "@mui/material/styles";
 import { ContactValidationSchema } from "../Validations/ContactValidation";
+import CustomDivider from "../Componentes/Common/CustomDivider";
 import {
   Typography,
   Card,
@@ -66,19 +67,13 @@ const Contact = ({ helmetTitle }) => {
         </Helmet>
 
         <CardContent>
-          <Divider textAlign="center" sx={{ mb: 3 }}>
-            <Chip
-              icon={<AccountCircle />}
-              color="warning"
-              label={
-                <Typography variant="body1" color="black" textAlign="center">
-                  ارتباط با من
-                </Typography>
-              }
-              sx={{ p: 3 }}
-            ></Chip>
-          </Divider>
-
+          <CustomDivider
+            bColor="warning.main"
+            cColor="warning"
+            icon={<AccountCircle />}
+            align="center"
+            text="ارتباط با من"
+          />
           <Grid container sx={{ mt: 5 }}>
             <Slide
               derection="up"
@@ -107,7 +102,8 @@ const Contact = ({ helmetTitle }) => {
                                     : null
                                 }
                                 error={Boolean(
-                                  formik.touched.fullname && formik.errors.fullname
+                                  formik.touched.fullname &&
+                                    formik.errors.fullname
                                 )}
                                 values={formik.values?.fullname}
                                 onChange={formik.handleChange}
@@ -164,7 +160,8 @@ const Contact = ({ helmetTitle }) => {
                                     : null
                                 }
                                 error={Boolean(
-                                  formik.touched.subject && formik.errors.subject
+                                  formik.touched.subject &&
+                                    formik.errors.subject
                                 )}
                                 values={formik.values?.subject}
                                 onChange={formik.handleChange}
@@ -195,7 +192,8 @@ const Contact = ({ helmetTitle }) => {
                                     : null
                                 }
                                 error={Boolean(
-                                  formik.touched.message && formik.errors.message
+                                  formik.touched.message &&
+                                    formik.errors.message
                                 )}
                                 values={formik.values?.message}
                                 onChange={formik.handleChange}
