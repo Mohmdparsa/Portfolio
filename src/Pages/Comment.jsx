@@ -21,6 +21,7 @@ const Comments = ({ helmetTitle, children }) => {
           overflowY: "scroll",
           display: "flex",
           flexDirection: "column",
+          direction:"rtl"
         }}
       >
         <Helmet>
