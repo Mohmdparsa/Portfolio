@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { useTheme } from "@mui/material/styles";
 import { ContactValidationSchema } from "../Validations/ContactValidation";
 import CustomDivider from "../Componentes/Common/CustomDivider";
+import {ContactForm} from "./Index"
 import {
   Typography,
   Card,
@@ -82,7 +83,7 @@ const Contact = ({ helmetTitle }) => {
             >
               <Grid xs={12} sx={12} md={8}>
                 <Card sx={{ justifyContent: "center", alignItems: "center" }}>
-                {/* form */}
+                  <ContactForm/>
                 </Card>
               </Grid>
             </Slide>
