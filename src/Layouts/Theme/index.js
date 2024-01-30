@@ -10,5 +10,8 @@ export const theme = createTheme({
         secondary:{
             main:"#212121"
         }
+    },
+    typography:{
+        fontFamily:"Tanha"
     }
   });

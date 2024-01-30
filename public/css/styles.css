@@ -7,3 +7,14 @@ body {
 .MuiCard-root::-webkit-scrollbar{
   display: none;
 }
+@font-face {
+  font-family: "Tanha";
+  src: url("../fonts/Tanha.eot");
+  src:url("../fonts/Tanha.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Tanha.woff") format("woff2"),
+  url("../fonts/Tanha.woff") format("woff"),
+  url("../fonts/Tanha.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
