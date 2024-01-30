@@ -6,10 +6,8 @@ const SidebarHeader = ()=>{
         <>
         <CustomAvatar
         avatar={portfolioImage}
-        size={200}
+        size={180}
         fallback="YG"
-         
-        
         />
              <Hidden mdDown>
        
