@@ -23,7 +23,7 @@ const ShowPortfolio = ({ loading }) => {
               transitionDelay: loading ? `${index + 3}99ms` : "0ms",
             }}
           >
-            <Card sx={{ maxWidth: 345, backgroundColor: "steelblue" }}>
+            <Card sx={{ maxWidth: 345, backgroundColor: "whitesmoke" }}>
               {/* new */}
               <CardActionArea>
                 <CardMedia
